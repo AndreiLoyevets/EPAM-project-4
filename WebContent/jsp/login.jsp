@@ -5,12 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Віртуальна Залізнична Каса</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
 </head>
 <body>
 <div style="text-align: center">
 <h1>Ласкаво просимо до<br/>Віртуальної Залізничної Каси!</h1>
-<form action="login-check.jsp" method="post">
+<form action="ServletController">
             <br/><br/>E-mail:&nbsp;&nbsp;&nbsp;
             <input name="email" type="email" size="35" required/><br/>
             Пароль:
@@ -23,7 +23,7 @@
                </tr>
             </table>
          </form>
-		 <form action="">
+		 <form action="jsp/registration.jsp">
 		    <input type="submit" class="button-new" value="Зареєструватись"/>
 		 </form>
 </div>
