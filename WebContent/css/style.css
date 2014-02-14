@@ -1,12 +1,27 @@
 @CHARSET "UTF-8";
+
+body {
+	background-image: url('train.gif');
+}
+
+table{width: 80%;}
+
+#wrapper {
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
 input.button-login {
+	position: relative;
     color: white;
 	background-color: #3B5998;;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
-	padding-right: 16px;
-	padding-left: 16px;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 input.button-register {
@@ -15,6 +30,5 @@ input.button-register {
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
-	padding-left: 77px;
-	padding-right: 77px;
+	width: 76%;
 }

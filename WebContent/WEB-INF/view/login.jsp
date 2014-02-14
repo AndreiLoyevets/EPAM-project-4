@@ -8,20 +8,28 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-<div style="text-align: center">
+<div id="wrapper">
 <h1>Ласкаво просимо до<br/>Віртуальної Залізничної Каси!</h1>
 <form action="/RailwayOfficeSystem/check">
-            <br/><br/>E-mail:&nbsp;&nbsp;&nbsp;
-            <input name="email" type="email" size="35" required/><br/>
-            Пароль:
-            <input name="password" type="password" size="35" maxlength="35" required/>
-            <p></p>
             <table style="margin: auto">
                <tr>
-                  <td><input type="submit" class="button-login" value="Користувач"/></td>
-                  <td><input type="submit" class="button-login" value="Адміністратор"/></td>
+                  <td>E-mail:</td>
+                  <td><input name="email" type="email" size="35" required/></td>
+               </tr>
+               <tr>
+               <td>Пароль:</td>
+                  <td><input name="password" type="password" size="35" maxlength="35" required/></td>
                </tr>
             </table>
+            <table style="margin: auto">
+               <tr>
+                  <td class="padding"><input type="submit" class="button-login" value="Користувач"/></td>
+                  <td class="padding"><input type="submit" class="button-login" value="Адміністратор"/></td>
+               </tr>
+            </table>
+            
+                  
+              
          </form>
 		 <form action="/RailwayOfficeSystem/registration">
 		    <input type="submit" class="button-register" value="Зареєструватись"/>
