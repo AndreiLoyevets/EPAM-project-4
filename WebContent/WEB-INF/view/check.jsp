@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>Перевірка входу | Віртуальна Залізнична Каса</title>
 </head>
 <body>
 <h1>перевірка параметрів входу</h1>

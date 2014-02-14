@@ -1,6 +1,8 @@
 package aloyevets.epam.project_4.controller;
 
 import java.io.IOException;
+
+import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,6 +28,7 @@ public class ServletController extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// create database and all needed classes here
+		System.out.println("Init");
 	}
 	
 	@Override
@@ -39,8 +42,18 @@ public class ServletController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//request.getRequestDispatcher("jsp/login.jsp").forward(request, response);
-		request.getRequestDispatcher("jsp/check.jsp").forward(request, response);
+		String userPath = request.getServletPath();
+		String url = "/WEB-INF/view/";
+		
+		if (userPath.equals("/login")) {
+			url += "login.jsp";
+		} else if (userPath.equals("/check")) {
+			url += "check.jsp";
+		} else if (userPath.equals("/registration")) {
+			url += "registration.jsp";
+		}
+		
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 	/**
