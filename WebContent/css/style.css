@@ -1,14 +1,14 @@
-input.button-login {
+.button-login {
     color: white;
-	background-color: #3B5998;
+	background-color: #FF0000;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
 }
 
-input.button-new {
+.button-new {
     color: white;
-	background-color: #62A350;
+	background-color: #00A15F;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
