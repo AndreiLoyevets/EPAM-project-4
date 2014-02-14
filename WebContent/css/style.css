@@ -1,15 +1,20 @@
-.button-login {
+@CHARSET "UTF-8";
+input.button-login {
     color: white;
-	background-color: #FF0000;
+	background-color: #3B5998;;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
+	padding-right: 16px;
+	padding-left: 16px;
 }
 
-.button-new {
+input.button-register {
     color: white;
 	background-color: #00A15F;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
+	padding-left: 77px;
+	padding-right: 77px;
 }

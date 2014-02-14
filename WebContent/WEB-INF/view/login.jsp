@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Вхід | Віртуальна Залізнична Каса</title>
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
 <div style="text-align: center">
@@ -24,7 +24,7 @@
             </table>
          </form>
 		 <form action="/RailwayOfficeSystem/registration">
-		    <input type="submit" class="button-new" value="Зареєструватись"/>
+		    <input type="submit" class="button-register" value="Зареєструватись"/>
 		 </form>
 </div>
 </body>
