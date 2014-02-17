@@ -14,9 +14,8 @@ table{width: 80%;}
 }
 
 input.button-login {
-	position: relative;
     color: white;
-	background-color: #3B5998;;
+	background-color: #3B5998;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
@@ -31,4 +30,14 @@ input.button-register {
 	font-weight: bold;
 	font-size: 1em;
 	width: 76%;
+}
+
+input.button-cancel {
+    color: white;
+	background-color: #CC181E;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	padding-left: 10%;
+	padding-right: 10%;
 }

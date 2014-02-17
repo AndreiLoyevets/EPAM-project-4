@@ -23,8 +23,8 @@
             </table>
             <table style="margin: auto">
                <tr>
-                  <td class="padding"><input type="submit" class="button-login" value="Користувач"/></td>
-                  <td class="padding"><input type="submit" class="button-login" value="Адміністратор"/></td>
+                  <td><input type="submit" class="button-login" value="Користувач"/></td>
+                  <td><input type="submit" class="button-login" value="Адміністратор"/></td>
                </tr>
             </table>
             

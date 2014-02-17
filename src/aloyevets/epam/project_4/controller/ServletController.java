@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import aloyevets.epam.project_4.model.entity.User;
+import aloyevets.epam.project_4.model.logic.Command;
+import aloyevets.epam.project_4.model.logic.CommandFactory;
+
 /**
  * Servlet implementation class ServletController
  */
@@ -45,9 +49,18 @@ public class ServletController extends HttpServlet {
 		String userPath = request.getServletPath();
 		String url = "/WEB-INF/view/";
 		
+		//CommandFactory commands = CommandFactory.getInstance();
+		//Command command = null;
+		//User user = null;
+		
 		if (userPath.equals("/login")) {
 			url += "login.jsp";
 		} else if (userPath.equals("/check")) {
+			//commands.getCommand("login");
+			//command.setAttributes(null);
+			//command.execute();
+			//user = (User) command.getResult();
+			
 			url += "check.jsp";
 		} else if (userPath.equals("/registration")) {
 			url += "registration.jsp";
