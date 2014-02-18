@@ -7,6 +7,7 @@ CREATE TABLE `railway_system`.`users` (
   `firstName` VARCHAR(35) NOT NULL,
   `surname` VARCHAR(35) NOT NULL,
   `phone` VARCHAR(12) NOT NULL,
+  `isActivated` TINYINT(1) NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC));
 
