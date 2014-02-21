@@ -1,6 +1,5 @@
 package aloyevets.epam.project_4.model.dao;
 
-
 public abstract class DAOFactory {
 	
 	// The list of supported databases.
@@ -10,7 +9,7 @@ public abstract class DAOFactory {
 	
 	public abstract UserDAO getUserDAO();
 	public abstract TrainDAO getTrainDAO();
-	// TO DO: add more DAO objects
+	// TODO add more DAO objects
 	
 	public static DAOFactory getDAOFactory(Factories factoryName) {
 		switch (factoryName) {
