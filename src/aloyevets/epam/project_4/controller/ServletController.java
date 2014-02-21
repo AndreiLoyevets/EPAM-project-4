@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Enumeration;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -15,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import aloyevets.epam.project_4.model.entity.User;
@@ -101,6 +103,8 @@ public class ServletController extends HttpServlet {
 			//testConnectionPool();
 			
 		} else if (userPath.equals("/check")) {
+			HttpSession session = request.getSession();
+			System.out.println(session);
 			//commands.getCommand("login");
 			//command.setAttributes(null);
 			//command.execute();
@@ -118,7 +122,50 @@ public class ServletController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String userPath = request.getServletPath();
+		String url = "/WEB-INF/view/";
+		
+		CommandFactory commands = CommandFactory.getInstance();
+		Command command = null;
+		
+		if (userPath.equals("/login")) {
+			url += "login.jsp";
+			
+			//testConnectionPool();
+			
+		} else if (userPath.equals("/check")) {
+			
+			// Get pressed button.
+			String buttonUser = request.getParameter("userLogin");
+			String buttonAdmin = request.getParameter("adminLogin");
+			String buttonRegister = request.getParameter("register");
+			
+			if (buttonUser != null) {
+				
+				// User login button was pressed.
+				command = commands.getCommand("user_login");
+				command.execute(request, response);
+				
+				// Check whether the user was found.
+				if (request.getSession().getAttribute("user") != null) {
+					url += "check.jsp";
+				} else {
+					url += "login.jsp";
+				}
+			}
+			
+			
+			//commands.getCommand("login");
+			//command.setAttributes(null);
+			//command.execute();
+			//user = (User) command.getResult();
+			
+			//url += "check.jsp";
+		} else if (userPath.equals("/registration")) {
+			url += "registration.jsp";
+		}
+		
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 }

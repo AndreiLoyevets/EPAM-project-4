@@ -6,6 +6,7 @@ public class User {
 	private String name;
 	private String surname;
 	private String phone;
+	private boolean isActivated;
 	
 	public String getEmail() {
 		return email;
@@ -45,5 +46,13 @@ public class User {
 	
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public boolean isActivated() {
+		return isActivated;
+	}
+
+	public void setActivated(boolean isActivated) {
+		this.isActivated = isActivated;
 	}
 }

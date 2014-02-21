@@ -16,7 +16,7 @@ public class CommandFactory {
 		Command.setDAOFactory(DAOFactory.getDAOFactory(Factories.MYSQL));
 		
 		// create commands and set mapping
-		commands.put("login", new LoginCommand());
+		commands.put("user_login", new UserLoginCommand());
 	}
 	
 	public static synchronized CommandFactory getInstance() {
