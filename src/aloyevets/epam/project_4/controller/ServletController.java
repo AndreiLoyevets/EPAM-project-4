@@ -101,6 +101,29 @@ public class ServletController extends HttpServlet {
 			}
 			
 		} else if (userPath.equals("/check-registration")) {
+			
+			// Before processing data, check that the passwords match.
+			String password = request.getParameter("password");
+			String passwordConfirm = request.getParameter("passwordConfirm");
+			
+			if (!password.equals(passwordConfirm)) {
+				request.setAttribute("passwordNotMatch", true);				
+				url += "registration.jsp";
+			} else {
+				
+				// Passwords match, forward request to the command.
+				request.removeAttribute("passwordNotMatch");
+				
+				command = commands.getCommand("create_user");
+				command.execute(request, response);
+				
+				if (request.getAttribute("userNotCreated") != null) {
+					url += "registration.jsp";
+				} else {
+					request.removeAttribute("userNotCreated");
+					url += "registration-success.jsp";
+				}
+			}
 		}
 		
 		request.getRequestDispatcher(url).forward(request, response);

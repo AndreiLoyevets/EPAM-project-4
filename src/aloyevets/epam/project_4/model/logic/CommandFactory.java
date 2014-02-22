@@ -18,6 +18,7 @@ public class CommandFactory {
 		// create commands and set mapping
 		commands.put("user_login", new UserLoginCommand());
 		commands.put("admin_login", new AdminLoginCommand());
+		commands.put("create_user", new CreateUserCommand());
 	}
 	
 	public static synchronized CommandFactory getInstance() {

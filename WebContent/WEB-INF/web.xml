@@ -7,6 +7,10 @@
       <servlet-class>aloyevets.epam.project_4.controller.ServletController</servlet-class>
       <load-on-startup>1</load-on-startup>
    </servlet>
+   <filter>
+      <filter-name>RequestFilter</filter-name>
+      <filter-class>aloyevets.epam.project_4.controller.RequestFilter</filter-class>
+   </filter>
    <servlet-mapping>
       <servlet-name>ServletController</servlet-name>
       <url-pattern>/login</url-pattern>
@@ -14,6 +18,11 @@
       <url-pattern>/registration</url-pattern>
       <url-pattern>/check-registration</url-pattern>
    </servlet-mapping>
+   <filter-mapping>
+      <filter-name>RequestFilter</filter-name>
+      <servlet-name>ServletController</servlet-name>
+   </filter-mapping>
+   
    <resource-ref>
       <description>DB Connection</description>
       <res-ref-name>jdbc/railway_system</res-ref-name>
