@@ -1,6 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,16 +13,16 @@
 		<h1>
 			Ласкаво просимо до<br />Віртуальної Залізничної Каси!
 		</h1>
-		<h1><font color="red">
+		<h3><font color="red">
 		   <c:if test="${not empty notActivated and notActivated eq 'true'}">
 		      Обліковий запис ще не активовано
 		   </c:if>
-		   <c:if test="${empty sessionScope.user}">
+		   <c:if test="${not empty notExists and notExists eq 'true'}">
 		      Обліковий запис не знайдено
 		   </c:if>
 		   </font>
-		</h1>
-		<form action="/RailwayOfficeSystem/check" method="post">
+		</h3>
+		<form action="/RailwayOfficeSystem/check-login" method="post">
 			<table style="margin: auto">
 				<tr>
 					<td>E-mail:</td>
@@ -45,7 +45,7 @@
 				</tr>
 			</table>
 		</form>
-		<form action="/RailwayOfficeSystem/registration" method="post">
+		<form action="/RailwayOfficeSystem/registration" method="get">
 			<input type="submit" class="button-register"
 			name="register" value="Зареєструватись" />
 		</form>

@@ -4,40 +4,66 @@ body {
 	background-image: url('train.gif');
 }
 
-table{width: 80%;}
-
 #wrapper {
 	width: 400px;
 	margin: 0 auto;
 	text-align: center;
 	background-color: #FFFFFF;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-top: 15px;
 }
 
-input.button-login {
-    color: white;
+.button-login {
+	color: white;
 	background-color: #3B5998;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
-	font-size: 1em;
-	padding-left: 10%;
-	padding-right: 10%;
+	font-size: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
-input.button-register {
-    color: white;
+.button-register {
+	color: white;
 	background-color: #00A15F;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
-	font-size: 1em;
-	width: 76%;
+	font-size: 16px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 300px;
 }
 
-input.button-cancel {
-    color: white;
+.button-cancel {
+	color: white;
 	background-color: #CC181E;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 1em;
 	padding-left: 10%;
 	padding-right: 10%;
+}
+
+.link-cancel {
+	color: white;
+	background-color: #CC181E;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	border-style: solid;
+	border-width : 2px;
+	border-top-color : #DDDDDD;
+	border-left-color : #DDDDDD;
+	border-bottom-color : #898989;
+	border-right-color : #898989;
+	text-decoration: none;
+	cursor: default;
 }

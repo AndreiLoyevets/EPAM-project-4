@@ -10,8 +10,9 @@
    <servlet-mapping>
       <servlet-name>ServletController</servlet-name>
       <url-pattern>/login</url-pattern>
-      <url-pattern>/check</url-pattern>
+      <url-pattern>/check-login</url-pattern>
       <url-pattern>/registration</url-pattern>
+      <url-pattern>/check-registration</url-pattern>
    </servlet-mapping>
    <resource-ref>
       <description>DB Connection</description>
