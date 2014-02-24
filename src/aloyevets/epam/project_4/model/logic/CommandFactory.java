@@ -19,6 +19,8 @@ public class CommandFactory {
 		commands.put("user_login", new UserLoginCommand());
 		commands.put("admin_login", new AdminLoginCommand());
 		commands.put("create_user", new CreateUserCommand());
+		commands.put("update_users", new UpdateUsersCommand());
+		commands.put("logout", new LogoutCommand());
 	}
 	
 	public static synchronized CommandFactory getInstance() {

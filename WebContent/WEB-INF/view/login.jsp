@@ -25,11 +25,11 @@
 		<form action="/RailwayOfficeSystem/check-login" method="post">
 			<table style="margin: auto">
 				<tr>
-					<td>E-mail:</td>
+					<td style="text-align: left">E-mail:</td>
 					<td><input name="email" type="email" size="35" required /></td>
 				</tr>
 				<tr>
-					<td>Пароль:</td>
+					<td style="text-align: left">Пароль:</td>
 					<td><input name="password" type="password" size="35"
 						maxlength="35" required /></td>
 				</tr>

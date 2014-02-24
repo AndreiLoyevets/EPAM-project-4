@@ -15,7 +15,7 @@ public class UserLoginCommand extends Command {
 		User user = new User();
 		
 		user.setEmail(request.getParameter("email"));
-		user.setPassword(request.getParameter("password"));
+		user.setPassword(request.getParameter("password"));		
 		
 		// Pass  the user to UserDAO.
 		UserDAO userDAO = daoFactory.getUserDAO();

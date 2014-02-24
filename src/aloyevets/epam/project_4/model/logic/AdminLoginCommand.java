@@ -15,6 +15,7 @@ public class AdminLoginCommand extends Command {
 		String password = request.getParameter("password");
 		
 		if (email.equals(ADMIN_EMAIL) && password.equals(ADMIN_PASSWORD)) {
+			request.removeAttribute("notExists");
 			
 			// Create User instance and set administrator for current session.
 			User user = new User();
@@ -23,9 +24,14 @@ public class AdminLoginCommand extends Command {
 			user.setActivated(true);
 			
 			request.getSession(true).setAttribute("admin", user);
+			
+			// Create a list of unconfirmed users.
+			Iterable<User> users = daoFactory.getUserDAO().findUnconfirmed();
+			
+			request.setAttribute("unconfirmedUsers", users);
+			
 		} else {
 			request.setAttribute("notExists", true);
 		}
 	}
-
 }

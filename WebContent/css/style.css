@@ -5,6 +5,10 @@ body {
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 }
 
+table {
+	font-size: 12px;
+}
+
 #wrapper {
 	width: 400px;
 	margin: 0 auto;
@@ -15,6 +19,26 @@ body {
 	padding-bottom: 15px;
 	padding-top: 15px;
 	box-shadow: 5px 5px 5px #898989;
+}
+
+#admin-panel {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	box-shadow: 5px 5px 5px #898989;
+}
+
+tr.odd {
+	background-color: #CEDDED;
+}
+
+tr.even {
+	background-color: #FFFFFF;
 }
 
 .button-login {

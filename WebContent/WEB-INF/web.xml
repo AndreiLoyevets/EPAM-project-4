@@ -17,6 +17,8 @@
       <url-pattern>/check-login</url-pattern>
       <url-pattern>/registration</url-pattern>
       <url-pattern>/check-registration</url-pattern>
+      <url-pattern>/admin-panel</url-pattern>
+      <url-pattern>/logout</url-pattern>
    </servlet-mapping>
    <filter-mapping>
       <filter-name>RequestFilter</filter-name>

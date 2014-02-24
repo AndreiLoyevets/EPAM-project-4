@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Вхід | Віртуальна Залізнична Каса</title>
+<title>Реєстрація | Віртуальна Залізнична Каса</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -24,32 +24,32 @@
 		<form action="/RailwayOfficeSystem/check-registration" method="post">
 			<table style="margin: auto">
 				<tr>
-					<td>E-mail:</td>
+					<td style="text-align: left">E-mail:</td>
 					<td><input name="email" value="${param.email}" type="email"
 					size="35" required /></td>
 				</tr>
 				<tr>
-					<td>Пароль:</td>
+					<td style="text-align: left">Пароль:</td>
 					<td><input name="password" type="password" size="35"
 						maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td>Підтвердіть пароль:</td>
+					<td style="text-align: left">Підтвердіть пароль:</td>
 					<td><input name="passwordConfirm" type="password" size="35"
 						maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td>Прізвище:</td>
+					<td style="text-align: left">Прізвище:</td>
 					<td><input name="surname" value="${param.surname}"
 					type="text" size="35" maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td>Ім'я:</td>
+					<td style="text-align: left">Ім'я:</td>
 					<td><input name="name" value="${param.name}"
 					type="text" size="35" maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td>Телефон:(наприклад, 380501234567)</td>
+					<td style="text-align: left">Телефон:<br />(наприклад, 380501234567)</td>
 					<td><input name="phone" value="${param.phone}"
 					type="tel" pattern='\d{12}' size="12" maxlength="12"
 					required /></td>

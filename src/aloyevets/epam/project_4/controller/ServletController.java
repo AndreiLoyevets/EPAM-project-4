@@ -46,13 +46,17 @@ public class ServletController extends HttpServlet {
 		String userPath = request.getServletPath();
 		String url = "/WEB-INF/view/";
 		
-		//CommandFactory commands = CommandFactory.getInstance();
-		//Command command = null;
+		CommandFactory commands = CommandFactory.getInstance();
+		Command command = null;
 		
 		if (userPath.equals("/login")) {
 			url += "login.jsp";
 		} else if (userPath.equals("/registration")) {
 			url += "registration.jsp";
+		} else if (userPath.equals("/logout")) {
+			command = commands.getCommand("logout");
+			command.execute(request, response);
+			url += "login.jsp";
 		}
 		
 		request.getRequestDispatcher(url).forward(request, response);
@@ -96,10 +100,9 @@ public class ServletController extends HttpServlet {
 				if (session.getAttribute("admin") == null) {
 					url += "login.jsp";
 				} else {
-					url += "check.jsp";
+					url += "admin-panel.jsp";
 				}
 			}
-			
 		} else if (userPath.equals("/check-registration")) {
 			
 			// Before processing data, check that the passwords match.
@@ -124,6 +127,12 @@ public class ServletController extends HttpServlet {
 					url += "registration-success.jsp";
 				}
 			}
+		} else if (userPath.equals("/admin-panel")) {
+			
+			// Update users.
+			command = commands.getCommand("update_users");
+			command.execute(request, response);
+			url += "admin-panel.jsp";
 		}
 		
 		request.getRequestDispatcher(url).forward(request, response);

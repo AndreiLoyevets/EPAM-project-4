@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 public class ConnectionPool {
 	private static DataSource dataSource;
 	
-	public static Connection getConnection() {
+	public static synchronized Connection getConnection() {
 		if (dataSource == null) {
 			try {
 				Context initContext = new InitialContext();

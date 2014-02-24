@@ -1,6 +1,7 @@
 package aloyevets.epam.project_4.model.entity;
 
 public class User {
+	private int id;
 	private String email;
 	private String password;
 	private String name;
@@ -8,6 +9,14 @@ public class User {
 	private String phone;
 	private boolean isActivated;
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getEmail() {
 		return email;
 	}
