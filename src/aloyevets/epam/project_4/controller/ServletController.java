@@ -89,7 +89,7 @@ public class ServletController extends HttpServlet {
 				if (session.getAttribute("user") == null) {
 					url += "login.jsp";
 				} else {
-					url += "check.jsp";
+					url += "user-panel.jsp";
 				}
 			} else if (buttonAdmin != null) {
 				
@@ -133,6 +133,12 @@ public class ServletController extends HttpServlet {
 			command = commands.getCommand("update_users");
 			command.execute(request, response);
 			url += "admin-panel.jsp";
+		} else if (userPath.equals("/find-train")) {
+			
+			// Find train that satisfies conditions.
+			command = commands.getCommand("find_train");
+			command.execute(request, response);
+			url += "trains.jsp";
 		}
 		
 		request.getRequestDispatcher(url).forward(request, response);

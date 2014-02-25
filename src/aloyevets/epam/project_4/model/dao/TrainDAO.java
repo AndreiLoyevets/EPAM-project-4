@@ -1,5 +1,7 @@
 package aloyevets.epam.project_4.model.dao;
 
-public interface TrainDAO {
+import aloyevets.epam.project_4.model.entity.Train;
 
+public interface TrainDAO {
+	Train findTrain(Train train);
 }

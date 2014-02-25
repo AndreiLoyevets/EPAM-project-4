@@ -41,7 +41,7 @@
 </tr>
 </c:forEach>
 </table>
-<input type="submit" class="button-login" name="updateUsers" value="Підтвердити" />
+<input type="submit" class="button-accept" name="updateUsers" value="Підтвердити" />
 </form>
 </c:when>
 <c:otherwise>

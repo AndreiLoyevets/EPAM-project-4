@@ -36,10 +36,10 @@
 			</table>
 			<table style="margin: auto">
 				<tr>
-					<td><input type="submit" class="button-login"
+					<td><input type="submit" class="button-accept"
 					    name="userLogin"
 						value="Користувач" /></td>
-					<td><input type="submit" class="button-login"
+					<td><input type="submit" class="button-accept"
 						name="adminLogin"
 						value="Адміністратор" /></td>
 				</tr>

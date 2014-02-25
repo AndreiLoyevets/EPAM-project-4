@@ -8,7 +8,11 @@ public class MySQLDAOFactory extends DAOFactory {
 
 	@Override
 	public TrainDAO getTrainDAO() {
-		// TODO Auto-generated method stub
-		return null;
+		return new MySQLTrainDAO();
+	}
+
+	@Override
+	public RouteDAO getRouteDAO() {
+		return new MySQLRouteDAO();
 	}
 }

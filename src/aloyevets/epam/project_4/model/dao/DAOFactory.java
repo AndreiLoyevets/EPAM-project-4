@@ -9,6 +9,7 @@ public abstract class DAOFactory {
 	
 	public abstract UserDAO getUserDAO();
 	public abstract TrainDAO getTrainDAO();
+	public abstract RouteDAO getRouteDAO();
 	// TODO add more DAO objects
 	
 	public static DAOFactory getDAOFactory(Factories factoryName) {

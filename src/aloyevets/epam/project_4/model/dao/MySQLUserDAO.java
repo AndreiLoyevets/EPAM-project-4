@@ -77,14 +77,13 @@ public class MySQLUserDAO implements UserDAO {
 			if (resultSet.first()) {
 
 				// Retrieve information from the result set.
-				user.setId(Integer.valueOf(resultSet.getString("id")));
+				user.setId(resultSet.getInt("id"));
 				user.setEmail(resultSet.getString("email"));
 				user.setPassword(resultSet.getString("password"));
 				user.setName(resultSet.getString("firstName"));
 				user.setSurname(resultSet.getString("surname"));
 				user.setPhone(resultSet.getString("phone"));
-				int isActivated = Integer.valueOf(resultSet
-						.getString("isActivated"));
+				int isActivated = resultSet.getInt("isActivated");
 
 				user.setActivated((isActivated == 0) ? false : true);
 
@@ -153,7 +152,7 @@ public class MySQLUserDAO implements UserDAO {
 					users = new ArrayList<User>();
 				}
 				User user = new User();
-				user.setId(Integer.valueOf(resultSet.getString("id")));
+				user.setId(resultSet.getInt("id"));
 				user.setEmail(resultSet.getString("email"));
 				user.setName(resultSet.getString("firstName"));
 				user.setSurname(resultSet.getString("surname"));

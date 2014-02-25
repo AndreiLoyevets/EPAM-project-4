@@ -6,7 +6,7 @@ body {
 }
 
 table {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 #wrapper {
@@ -33,6 +33,18 @@ table {
 	box-shadow: 5px 5px 5px #898989;
 }
 
+#trains-result {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	box-shadow: 5px 5px 5px #898989;
+}
+
 tr.odd {
 	background-color: #CEDDED;
 }
@@ -41,7 +53,11 @@ tr.even {
 	background-color: #FFFFFF;
 }
 
-.button-login {
+.text-left {
+	text-align: left;
+}
+
+.button-accept {
 	color: white;
 	background-color: #3B5998;
 	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;

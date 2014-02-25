@@ -22,34 +22,34 @@
 			</font>
 		</h3>
 		<form action="/RailwayOfficeSystem/check-registration" method="post">
-			<table style="margin: auto">
+			<table style="margin: auto; text-align: left">
 				<tr>
-					<td style="text-align: left">E-mail:</td>
+					<td>E-mail:</td>
 					<td><input name="email" value="${param.email}" type="email"
 					size="35" required /></td>
 				</tr>
 				<tr>
-					<td style="text-align: left">Пароль:</td>
+					<td>Пароль:</td>
 					<td><input name="password" type="password" size="35"
 						maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td style="text-align: left">Підтвердіть пароль:</td>
+					<td>Підтвердіть пароль:</td>
 					<td><input name="passwordConfirm" type="password" size="35"
 						maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td style="text-align: left">Прізвище:</td>
+					<td>Прізвище:</td>
 					<td><input name="surname" value="${param.surname}"
 					type="text" size="35" maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td style="text-align: left">Ім'я:</td>
+					<td>Ім'я:</td>
 					<td><input name="name" value="${param.name}"
 					type="text" size="35" maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td style="text-align: left">Телефон:<br />(наприклад, 380501234567)</td>
+					<td>Телефон:<br />(наприклад, 380501234567)</td>
 					<td><input name="phone" value="${param.phone}"
 					type="tel" pattern='\d{12}' size="12" maxlength="12"
 					required /></td>
@@ -57,7 +57,7 @@
 			</table>
 			<table style="margin: auto">
 				<tr>
-					<td><input type="submit" class="button-login" name="create"
+					<td><input type="submit" class="button-accept" name="create"
 						value="Підтвердити" /></td>
 					<td><a class="link-cancel" href="/RailwayOfficeSystem/login">
 					Відмінити</a></td>

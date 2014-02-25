@@ -21,6 +21,7 @@ public class CommandFactory {
 		commands.put("create_user", new CreateUserCommand());
 		commands.put("update_users", new UpdateUsersCommand());
 		commands.put("logout", new LogoutCommand());
+		commands.put("find_train", new FindTrainCommand());
 	}
 	
 	public static synchronized CommandFactory getInstance() {
