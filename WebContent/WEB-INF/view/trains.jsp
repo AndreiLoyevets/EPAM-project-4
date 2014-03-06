@@ -19,6 +19,7 @@
 		</c:when>
 		<c:otherwise>
 		<h3>Пошук поїздів на ${departureDate}</h3>
+		<form action="/RailwayOfficeSystem/create-invoice" method="post">
 		<table style="margin: auto">
 <tr class="odd">
 <th>№ поїзда</th>
@@ -37,10 +38,13 @@
 <td><c:out value="${route.destinationStation}"/></td>
 <td><c:out value="${route.departureTime}"/></td>
 <td><c:out value="${route.destinationTime}"/></td>
+<td><input type="submit" class="button-accept" name="suite${route.id}" value="Вибрати"/></td>
+<td><input type="submit" class="button-accept" name="coupe${route.id}" value="Вибрати"/></td>
+<td><input type="submit" class="button-accept" name="berth${route.id}" value="Вибрати"/></td>
 </tr>
 </c:forEach>
 </table>
-		
+</form>
 		</c:otherwise>
 		</c:choose>
 	</div>

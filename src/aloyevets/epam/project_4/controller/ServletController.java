@@ -139,6 +139,12 @@ public class ServletController extends HttpServlet {
 			command = commands.getCommand("find_train");
 			command.execute(request, response);
 			url += "trains.jsp";
+		} else if (userPath.equals("/create-invoice")) {
+			
+			// Prepare new invoice
+			command = commands.getCommand("prepare_invoice");
+			command.execute(request, response);
+			url += "invoice.jsp";
 		}
 		
 		request.getRequestDispatcher(url).forward(request, response);

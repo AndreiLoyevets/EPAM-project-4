@@ -20,6 +20,7 @@
       <url-pattern>/admin-panel</url-pattern>
       <url-pattern>/logout</url-pattern>
       <url-pattern>/find-train</url-pattern>
+      <url-pattern>/create-invoice</url-pattern>
    </servlet-mapping>
    <filter-mapping>
       <filter-name>RequestFilter</filter-name>
